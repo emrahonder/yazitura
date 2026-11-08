@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Yazı Tura At</title>
+  <meta name="description" content="Yazı Tura at, kararını belirle">
+  <meta name="keywords" content="yazı tura, para at, heads or tails, yazı tura at, tahmin, kader, coin flip">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <main class="card">
+    <div class="lang-switch" role="group" aria-label="Language / Dil">
+      <button type="button" class="lang-btn" data-lang="tr">TR</button>
+      <button type="button" class="lang-btn" data-lang="en">EN</button>
+    </div>
+
+    <h1 data-i18n="title">Yazı Tura At</h1>
+    <p class="subtitle" data-i18n="subtitle">Kararını şansa bırak.</p>
+
+    <div class="coin-stage">
+      <div id="coin" class="coin">
+        <img id="coin-img" src="images/head.jpg" alt="Tura" width="200" height="200">
+      </div>
+    </div>
+
+    <div id="result" class="result" aria-live="polite"></div>
+
+    <form id="controls" class="controls">
+      <label for="times" data-i18n="howMany">Kaç kez atılsın?</label>
+      <div class="row">
+        <select id="times" data-i18n-aria="timesAria" aria-label="Atış sayısı"></select>
+        <button type="submit" id="throw-btn" data-i18n="throw">At</button>
+      </div>
+    </form>
+
+    <section class="history" aria-labelledby="history-title">
+      <div class="history-head">
+        <h2 id="history-title" data-i18n="historyTitle">Geçmiş</h2>
+        <button type="button" id="clear-btn" class="link-btn" data-i18n="clear">Temizle</button>
+      </div>
+      <ul id="history-list" class="history-list"></ul>
+    </section>
+
+    <section class="about">
+      <details>
+        <summary data-i18n="whyTitle">Yazı tura neden atılır?</summary>
+        <p data-i18n="whyBody"></p>
+      </details>
+      <details>
+        <summary data-i18n="historyInfoTitle">Kısa tarihçe</summary>
+        <ul>
+          <li data-i18n="hist1"></li>
+          <li data-i18n="hist2"></li>
+          <li data-i18n="hist3"></li>
+          <li data-i18n="hist4"></li>
+        </ul>
+      </details>
+      <details>
+        <summary data-i18n="oddTitle">Neden sadece tek sayılar?</summary>
+        <p data-i18n="oddBody"></p>
+      </details>
+    </section>
+
+    <p class="disclaimer" data-i18n="disclaimer"></p>
+  </main>
+
+  <script src="js/i18n.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
